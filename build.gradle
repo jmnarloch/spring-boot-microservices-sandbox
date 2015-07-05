@@ -1,0 +1,73 @@
+buildscript {
+    ext {
+        springBootVersion = '1.2.5.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:0.5.1.RELEASE")
+    }
+}
+
+plugins {
+    id "com.github.hierynomus.license" version "0.11.0"
+    id 'net.researchgate.release' version '2.1.2'
+}
+
+apply from: 'libraries.gradle'
+//apply from: 'gradle/license.gradle'
+apply from: 'gradle/release.gradle'
+
+apply plugin: 'idea'  
+apply plugin: 'io.spring.dependency-management'
+
+group = "com.github.jmnarloch"
+
+ext {
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'jacoco'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+
+        compile (libraries.springBoot)
+
+        testCompile (libraries.junit)
+        testCompile (libraries.mockito)
+        testCompile (libraries.springBootTest)
+    }
+
+    task javadocJar(type: Jar) {
+        classifier = 'javadoc'
+        from javadoc
+    }
+
+    task sourcesJar(type: Jar) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    artifacts {
+        archives javadocJar, sourcesJar
+    }
+}

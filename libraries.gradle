@@ -1,0 +1,26 @@
+ext {
+
+    springBootVersion = '1.2.5.RELEASE'
+    springCloudVersion = '1.0.3.RELEASE'
+
+    libraries = [
+            // spring boot starters
+            springBoot   : "org.springframework.boot:spring-boot-starter:${springBootVersion}",
+            springBootWeb   : "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
+            springBootTest   : "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
+
+            // spring cloud starters
+            springCloudConfig   : "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}",
+            springEureka	    : "org.springframework.cloud:spring-cloud-starter-eureka:${springCloudVersion}",
+            springEurekaServer	: "org.springframework.cloud:spring-cloud-starter-eureka-server:${springCloudVersion}",
+            springFeign     	: "org.springframework.cloud:spring-cloud-starter-feign:${springCloudVersion}",
+            springHystrix     	: "org.springframework.cloud:spring-cloud-starter-hystrix:${springCloudVersion}",
+            springZuul       	: "org.springframework.cloud:spring-cloud-starter-zuul:${springCloudVersion}",
+
+            // spring cloud server
+            springCloudConfigServer   : "org.springframework.cloud:spring-cloud-config-server:1.0.2.RELEASE",
+
+            junit        : 'junit:junit:4.12',
+            mockito      : 'org.mockito:mockito-all:1.10.19'
+    ]
+}

@@ -1,0 +1,7 @@
+apply plugin: 'spring-boot'
+
+dependencies {
+
+    compile (libraries.springEureka)
+    compile (libraries.springCloudConfigServer)
+}

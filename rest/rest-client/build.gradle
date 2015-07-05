@@ -1,0 +1,9 @@
+apply plugin: 'spring-boot'
+
+dependencies {
+
+    compile project(':rest:rest-api')
+
+    compile (libraries.springBootWeb)
+    compile (libraries.springFeign)
+}

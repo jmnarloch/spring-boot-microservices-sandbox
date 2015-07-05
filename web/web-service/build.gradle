@@ -1,0 +1,12 @@
+
+dependencies {
+
+    compile project(':rest:rest-client')
+
+    compile (libraries.springBootWeb)
+    compile (libraries.springFeign)
+    compile (libraries.springHystrix)
+    compile (libraries.springZuul)
+    compile (libraries.springEureka)
+    compile (libraries.springCloudConfig)
+}

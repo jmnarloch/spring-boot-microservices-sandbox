@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-service

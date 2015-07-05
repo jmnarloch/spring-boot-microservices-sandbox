@@ -1,0 +1,9 @@
+include 'config:config-service',
+        'eureka:eureka-service',
+        'authentication:authentication-oauth-service',
+        'rest:rest-api',
+        'rest:rest-client',
+        'rest:rest-domain',
+        'rest:rest-dao',
+        'rest:rest-service',
+        'web:web-service'
