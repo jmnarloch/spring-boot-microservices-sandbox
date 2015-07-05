@@ -7,10 +7,13 @@ ext {
             // spring boot starters
             springBoot   : "org.springframework.boot:spring-boot-starter:${springBootVersion}",
             springBootWeb   : "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
+            springBootJpa   : "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}",
+            springBootSecurity   : "org.springframework.boot:spring-boot-starter-security:${springBootVersion}",
             springBootTest   : "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
 
             // spring cloud starters
             springCloudConfig   : "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}",
+            springCloudSecurity   : "org.springframework.cloud:spring-cloud-starter-security:${springCloudVersion}",
             springEureka	    : "org.springframework.cloud:spring-cloud-starter-eureka:${springCloudVersion}",
             springEurekaServer	: "org.springframework.cloud:spring-cloud-starter-eureka-server:${springCloudVersion}",
             springFeign     	: "org.springframework.cloud:spring-cloud-starter-feign:${springCloudVersion}",
@@ -19,6 +22,11 @@ ext {
 
             // spring cloud server
             springCloudConfigServer   : "org.springframework.cloud:spring-cloud-config-server:1.0.2.RELEASE",
+
+            springSecurityOAuth       : 'org.springframework.security.oauth:spring-security-oauth2:2.0.7.RELEASE',
+
+            // database
+            h2                  : 'com.h2database:h2:1.4.187',
 
             junit        : 'junit:junit:4.12',
             mockito      : 'org.mockito:mockito-all:1.10.19'

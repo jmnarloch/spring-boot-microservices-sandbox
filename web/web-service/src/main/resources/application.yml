@@ -1,7 +1,33 @@
 server:
   port: ${PORT:8080}
 
+security:
+  user:
+    password: password
+
+zuul:
+  routes:
+    resource:
+      path: /rest/**
+      url: http://localhost:8541
+    user:
+      path: /user/**
+      url: http://localhost:9999/uaa/user
+
 spring:
+  oauth2:
+    sso:
+      home:
+        secure: false
+        path: /,/**/*.html
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
+
   cloud:
     config:
       discovery:

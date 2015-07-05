@@ -4,9 +4,12 @@ dependencies {
     compile project(':rest:rest-client')
 
     compile (libraries.springBootWeb)
+    compile (libraries.springBootSecurity)
+    compile (libraries.springCloudSecurity)
+    compile (libraries.springSecurityOAuth)
+    compile (libraries.springCloudConfig)
     compile (libraries.springFeign)
     compile (libraries.springHystrix)
     compile (libraries.springZuul)
     compile (libraries.springEureka)
-    compile (libraries.springCloudConfig)
 }

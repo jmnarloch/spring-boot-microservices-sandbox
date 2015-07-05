@@ -1,5 +1,8 @@
 
+
 dependencies {
+
+	compile project(':rest:rest-domain')
 
     compile (libraries.springBootJpa)
 }

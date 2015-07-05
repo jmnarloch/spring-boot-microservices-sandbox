@@ -2,6 +2,10 @@ server:
   port: ${PORT:8541}
 
 spring:
+  oauth2:
+    resource:
+        userInfoUri: http://localhost:9999/uaa/user
+
   cloud:
     config:
       discovery:
