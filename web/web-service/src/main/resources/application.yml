@@ -6,10 +6,11 @@ security:
     password: password
 
 zuul:
+  ignoredServices: '*'
   routes:
     resource:
       path: /rest/**
-      url: http://localhost:8541
+      serviceId: rest-service
     user:
       path: /user/**
       url: http://localhost:9999/uaa/user

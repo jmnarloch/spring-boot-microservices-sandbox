@@ -2,6 +2,9 @@ apply plugin: 'spring-boot'
 
 dependencies {
 
+    compile (libraries.springBoot)
+    compile (libraries.springBootWeb)
+    compile (libraries.springBootActuator)
     compile (libraries.springEureka)
     compile (libraries.springCloudConfigServer)
 }

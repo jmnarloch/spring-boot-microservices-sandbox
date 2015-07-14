@@ -9,6 +9,7 @@ ext {
             springBootWeb   : "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
             springBootJpa   : "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}",
             springBootSecurity   : "org.springframework.boot:spring-boot-starter-security:${springBootVersion}",
+            springBootActuator   : "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}",
             springBootTest   : "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
 
             // spring cloud starters

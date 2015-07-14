@@ -3,7 +3,9 @@ dependencies {
 
     compile project(':rest:rest-client')
 
+    compile (libraries.springBoot)
     compile (libraries.springBootWeb)
+    compile (libraries.springBootActuator)
     compile (libraries.springBootSecurity)
     compile (libraries.springCloudSecurity)
     compile (libraries.springSecurityOAuth)

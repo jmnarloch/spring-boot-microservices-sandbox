@@ -29,6 +29,13 @@ ext {
     isReleaseVersion = !version.endsWith("SNAPSHOT")
 }
 
+idea {
+    project {
+
+        languageLevel = '1.8'
+    }
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.4'
 }
