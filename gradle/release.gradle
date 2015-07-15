@@ -12,7 +12,7 @@ subprojects {
                 }
 
                 snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-                    authentication(userName: ossrhUsername, password: ossrhPassword)
+                    authentication(userName: rootProject.hasProperty('ossrhUsername') ? rootProject.ossrhUsername : '', password: rootProject.hasProperty('ossrhPassword') ? rootProject.ossrhPassword : '')
                 }
 
                 pom.project {
